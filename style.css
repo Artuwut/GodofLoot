@@ -1,0 +1,215 @@
+@font-face {
+    font-family: Diablo;
+    src: url(font/Diabolica-VRBB.ttf);
+    font-weight: normal;
+    font-size: normal;
+}
+
+body{
+    background-image: url(background.png);
+    background-repeat: no-repeat;       /* Prevents the image from repeating */
+    background-size: cover;             /* Scales the image to cover the entire background */
+    background-position: center;        /* Ensures the image is centered */
+}
+
+#title{
+    font-size: 100px;
+    text-decoration: underline;
+    color: black;
+    text-shadow: 
+                0 0 10px #ff9900,   
+                0 0 20px #ff6600,   
+                0 0 30px #cc3300,   
+                0 0 40px #990000,   
+                0 0 50px #660000;   
+    font-family: Diablo;
+    text-align: center;
+    
+}
+
+#info{
+    font-family: Diablo;
+    color: #ffffff;
+
+}
+#infoContainer, #infoContainerRight {
+    border: 3px ridge #813400; 
+    padding: 20px;
+    width: 450px; /* Adjusted width to make it narrower */
+    height: 500px; /* Increased height to make it longer */
+    background-color: rgba(78, 78, 78, 0.24);
+    text-align: center;
+    overflow-y: auto;
+}
+#containerWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    margin-left: 5%;
+    margin-right: 5%; /* Adjusted margin to maintain balance on both sides */
+}
+
+#hInfo, #hInfoRight {
+    font-family: Diablo;
+    text-decoration: underline;
+    font-size: 70px;
+    color: rgb(255, 255, 255);
+    text-shadow: 
+        0 0 10px rgba(255, 153, 0, 0.8),  /* First layer of glow */
+        0 0 20px rgba(255, 153, 0, 0.6),  /* Second, larger glow */
+        0 0 30px rgba(255, 102, 0, 0.6),  /* Third, even larger glow */
+        0 0 40px rgba(255, 66, 0, 0.5);   /* Final, soft glow */
+    margin: 0;                   /* Remove default margins */
+    position: sticky;
+    top: 0;    
+    z-index: 1;
+    background-color:   0 0 10px rgba(255, 153, 0, 0.8),  /* First layer of glow */
+    0 0 20px rgba(255, 153, 0, 0.6),  /* Second, larger glow */
+    0 0 30px rgba(255, 102, 0, 0.6),  /* Third, even larger glow */
+    0 0 40px rgba(255, 66, 0, 0.5);   /* Final, soft glow */
+    backdrop-filter: blur(10px);  /* Adjust the blur amount as needed */
+    padding: 10px;   
+    transform: translateY(-20px); /* Adjust the value to move it up or down */
+    
+}
+
+
+#infoText, #infoTextRight {
+    font-family: Diablo;
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 10px #ff9900,   
+                0 0 20px #ff6600;
+    margin: 40px 0 20px 0;        /* Adjust top and bottom margins for spacing */
+  
+}
+
+
+#tournament-bracket {
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    transform: translateY(-200%);
+}
+
+#twitch, #twitchR {
+    display: flex; /* Use flexbox for the inner layout */
+    align-items: center; /* Center items vertically within the link */
+    color: white;
+    border: solid 4px purple; /* Wider border */
+    background-color: rgba(221, 160, 221, 0.192);
+    padding: 10px 20px; /* Reduced padding for height */
+    margin: 0 10px; /* Add some space between the elements */
+    width: 150px; /* Adjust width to fit content */
+}
+
+#twitch img, #twitchR img {
+    width: 50px; /* Set a fixed width for the images */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Space between image and text */
+}
+
+#vs {
+    font-family: Diablo;
+    color: black;
+    text-shadow: 
+                0 0 10px #ff9900,   
+                0 0 20px #ff6600,   
+                0 0 30px #cc3300,   
+                0 0 40px #990000,   
+                0 0 50px #660000;   
+    font-size: 50px; /* Adjust the size of the vs text */
+    font-weight: bold; /* Make the VS text bold */
+    margin: 0 20px; /* Add space around the VS text */
+}
+
+#twitch:hover, #twitchR:hover {
+    background-color: rgba(221, 160, 221, 0.4); /* Lighter background color on hover */
+    cursor: pointer; /* Show pointer on hover to indicate it's clickable */
+}
+
+#twitch-link, #twitchR-link {
+    text-decoration: none; /* No underline */
+    color: inherit; /* Inherit the color from #twitch */
+}
+
+#names{
+    font-size: 20px;
+    text-shadow: 0 0 10px #ff9900,   
+                0 0 20px #ff6600;
+}
+
+.points-wrapper {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 90%;
+    max-width: 1200px;
+    height: 100vh;
+    padding: 20px;
+}
+
+.points-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Ensure the label and points align properly */
+    margin-bottom: 20px;
+    border-bottom: 1px solid #555;
+    padding: 10px 0;
+}
+
+.points {
+    color: white;
+    text-shadow: 1px 1px 2px rgb(0, 0, 0);
+    text-align: right;
+    margin-left: auto;
+    padding-left: 100px; /* Increased padding between label and points */
+
+}
+
+.positive .points {
+    color: green;
+}
+
+.negative .points {
+    color: red;
+}
+
+#header{
+    text-shadow: 0 0 10px #ff9900, 0 0 20px #ff6600;
+    font-family: Diablo;
+    padding-bottom: 36px;
+    font-size: 30px;
+    padding-top: 20px;
+    text-align: center;
+    
+}
+
+.label {
+    color: white;
+    text-align: left;
+    padding-right: 20px; /* Increased space between label and points */
+
+}
+
+#sonderText {
+    color: white;
+    font-size: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    line-height: 1.5;
+    padding: 20px; /* Add padding inside the container */
+    
+}
+#sonderText2 {
+    color: white;
+    font-size: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    line-height: 1.5;
+    padding: 20px; /* Add padding inside the container */
+}
